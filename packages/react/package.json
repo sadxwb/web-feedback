@@ -1,0 +1,47 @@
+{
+  "name": "@web-feedback/react",
+  "version": "0.0.1",
+  "type": "module",
+  "sideEffects": false,
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    },
+    "./adapters/jira": {
+      "types": "./dist/adapters/jira.d.ts",
+      "import": "./dist/adapters/jira.js",
+      "require": "./dist/adapters/jira.cjs"
+    },
+    "./adapters/webhook": {
+      "types": "./dist/adapters/webhook.d.ts",
+      "import": "./dist/adapters/webhook.js",
+      "require": "./dist/adapters/webhook.cjs"
+    }
+  },
+  "files": ["dist", "src"],
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "html-to-image": "^1.11.11"
+  },
+  "peerDependencies": {
+    "react": ">=18",
+    "react-dom": ">=18"
+  },
+  "devDependencies": {
+    "@types/react": "^18.3.12",
+    "@types/react-dom": "^18.3.1",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "tsup": "^8.3.0",
+    "typescript": "^5.6.3"
+  }
+}
