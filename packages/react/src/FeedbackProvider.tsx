@@ -18,13 +18,13 @@ export interface ShowOptions {
   target?: HTMLElement;
 }
 
-interface ContextValue {
+export interface FeedbackContextValue {
   show: (options?: ShowOptions) => Promise<void>;
   isOpen: boolean;
   capturing: boolean;
 }
 
-export const FeedbackContext = createContext<ContextValue | null>(null);
+export const FeedbackContext = createContext<FeedbackContextValue | null>(null);
 
 interface Props {
   onFeedback: OnFeedback;

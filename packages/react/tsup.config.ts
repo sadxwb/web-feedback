@@ -20,6 +20,7 @@ export default defineConfig([
     dts: true,
     platform: 'node',
     target: 'node18',
+    external: ['server-only'],
     clean: false,
   },
 ]);

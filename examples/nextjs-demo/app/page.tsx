@@ -15,7 +15,7 @@ export default function Page() {
       </p>
       <button
         type="button"
-        onClick={show}
+        onClick={() => show()}
         disabled={capturing}
         style={{
           padding: '10px 16px',
